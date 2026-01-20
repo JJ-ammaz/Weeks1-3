@@ -1,5 +1,6 @@
 using System;
 using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -29,14 +30,14 @@ public class Movement : MonoBehaviour
         Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
 
         //movement if's
-        if (screenPos.x < 10)
+        if (screenPos.x < Screen.width * -1 )
         {
             newPosition.x = bottomleft.x;
             speed = speed * -1;
             Flipped = true;
         }
 
-        if (screenPos.x > Screen.width)
+        if (screenPos.x > Screen.width * 2)
         {
             newPosition.x = topright.x;
             speed = speed * -1;
