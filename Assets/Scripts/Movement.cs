@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Tilemaps;
@@ -17,7 +18,8 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = 5f;
+        speed = UnityEngine.Random.Range(4, 5);
+            //.Range(4, 5);
         topr = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width + 150, Screen.height));
         bottoml = Camera.main.ScreenToWorldPoint(new Vector2(-150, 0));
         // startl = new Vector2(-2, -2);
