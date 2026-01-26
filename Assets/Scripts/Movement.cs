@@ -18,8 +18,8 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = UnityEngine.Random.Range(4, 5);
-            //.Range(4, 5);
+        speed = UnityEngine.Random.Range(4,6);
+            //range so that it isnt always the same
         topr = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width + 150, Screen.height));
         bottoml = Camera.main.ScreenToWorldPoint(new Vector2(-150, 0));
         // startl = new Vector2(-2, -2);
